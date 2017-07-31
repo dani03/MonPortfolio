@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="divice-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
     <link rel="stylesheet" href="../css/style.css">
     <title>mon Porfolio</title>
   </head>
@@ -24,51 +25,202 @@
       </div>
       <div class="collapse navbar-collapse" id="monMenu">
         <ul class="nav navbar-nav">
-          <li><a href="#">A Propos</a></li>
-          <li><a href="#">formation</a></li>
-          <li><a href="#">competences</a></li>
-          <li><a href="#">experiences</a></li>
+          <li><a href="#apropos" class="slide">A Propos</a></li>
+          <li><a href="#story" class="slide">formation</a></li>
+          <li><a href="#educate" class="slide">competences</a></li>
+          <li><a href="#experiences" class="slide">experiences</a></li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">projets</a></li>
-          <li><a href="#">contacts</a></li>
+          <li><a href="#allProjets" class="slide">projets</a></li>
+          <li><a href="#messagerie" class="slide">contacts</a></li>
         </ul>
       </div>
     </div>
   </nav>
 <!-- fin de la nav bar -->
 
-    <div class="firstone container-fluid">
-      <div class="presentation row">
+    <div class="firstone container-fluid" id="apropos">
+      <div class=" animated zoomOut presentation  row">
           <div class="photomathon">
             <img src="../images/eto-fils.jpg" class="img-thumbnail img-responsive" alt="">
           </div>
           <div class="typed">
-            <h2 class="type text">hi je m'appelle etc etc...</h2>
+            <h2 class="type typing">hi je m'appelle etc etc...</h2>
           </div>
       </div>
+      <div class="animated zoomIn developpeur " id="cacher">
+          <h1 class="zoomIn">developpeur web junior</h1>
+           <h5 class="zoomIn">bonne visite de mon site!!</h5>
+      </div>
     </div>
-
+<!-- niveau formation -->
     <div class="a_propos container-fluid" id="story">
       <div class="line" id="ligne">
-        <h2>formation simplon</h2>
-         <span></span>
+        <h2>formation</h2>
+         <p>2017</p>
       </div>
-      <section>
 
-      </section>
+       <div class="etudes row">
+         <div class="scolaire">
+           <section id="simplon" class="promo">
+             <p></p>
+             <h4>titre </h4>
+           </section>
+
+           <section id="université" class="promo">
+             <p></p>
+              <h4>titre </h4>
+           </section>
+
+           <section id="lycee" class="promo">
+             <p></p>
+             <h4>titre </h4>
+           </section>
+         </div>
+         <div class="years">
+             <section class="annee">
+               <p>lorem ipsum hello world</p>
+             </section>
+             <section class="annee">
+               <p>lorem ipsum hello world</p>
+             </section>
+             <section class="annee">
+               <p>lorem ipsum hello world</p>
+             </section>
+         </div>
+       </div>
+
     </div>
-
-    <div class="formation container-fluid" id="educate">
+<!-- les barres de progressions niveau competances -->
+  <div class="formation container-fluid" id="educate">
      <div class="simplon">
-       <h2>formation dev...</h2>
+       <div class="line" id="ligne">
+         <h2>compétences</h2>
+       </div>
+           <div class="langages row">
+              <div class="progress">
+                <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" style="width:60%"> 60%</div>
+              </div>
 
-     </div>
+              <div class="progress">
+                <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" style="width:60%"> 60%</div>
+              </div>
 
+              <div class="progress">
+                <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" style="width:60%"> 60%</div>
+              </div>
 
+              <div class="progress">
+                <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" style="width:60%"> 60%</div>
+              </div>
 
+              <div class="progress">
+                <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" style="width:60%"> 60%</div>
+              </div>
+              <div class="progress">
+                  <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" style="width:60%"> 60%</div>
+              </div>
+         </div>
+       </div>
     </div>
+<!-- mes experiences niveau experiences dans le navigateur -->
+    <div class="expe container-fluid" id="experiences">
+         <div class="row develop">
+           <div class="line" id="ligne">
+             <h2>experiences</h2>
+           </div>
+           <div class="stage " id="garageNum">
+             <h3> garage numerique</h3>
+             <p>descrition du garage</p>
+           </div>
+           <div class="entreprise" id="hack">
+              <h3>hackthon</h3>
+              <p>descrition du hackathon</p>
+           </div>
+           <div class="entreprise" id="hack">
+              <h3>soutient scolaire</h3>
+              <p>descrition du scolaire</p>
+           </div>
+         </div>
+    </div>
+    <!-- niveau projets -->
+    <div class="projets container-fluid" id="allProjets">
+        <div class="row groupe">
+          <div class="line" id="ligne">
+            <h2>projets</h2>
+          </div>
+        <div class="groupe">
+          <!-- *****************projets kiway************************ -->
+            <div class="allProjet">
+               <p class="titleProjet">kiway</p>
+                 <div class="overlay">
+                    <p class="text"><strong>le projet kiway</strong> <br>avait pour objetif de créer un site internet <br> d'une application,<br>
+                       qui a pour but de faciliter <br> le stationnement sur paris. </p>
+                 </div>
+              </div>
+    <!--********************** projets pierre feuille ciseaux************************** -->
+              <div class="allProjet">
+                 <p class="titleProjet">pfc(pierre feuille ciseaux)</p>
+                  <div class="overlay">
+                     <p class="text"><strong>le projet pfc</strong> <br>avait pour objetif <br> de créer le jeu pierre feuille ciseaux <br>et de le programmer de tel sorte qu'il <br> puisse jouer contre l'utilisateur<br>
+                       et renvoyer le vainqueur.
+                  </div>
+                </div>
+      <!--******projet ecormerce************************  -->
+                <div class="allProjet">
+                  <p class="titleProjet">e-commerce</p>
+                   <div class="overlay">
+                      <p class="text"><strong>le projet e-commerce</strong> <br>le but de ce projet de mi formation<br>etait de regrouper tout <br> ce qui avait été appris jusque la<br>et pouvoir constituer un panier <br> puis etre capable de commander.<br>
+                   </div>
+                </div>
+                <!--************* projet vtc************** -->
+              <div class="allProjet">
+               <p class="titleProjet">vtc</p>
+                <div class="overlay">
+                   <p class="text"><strong>le projet vtc</strong> <br>l'objectif de ce projet de mi formation<br>etait de concevoir le site d'un VTC.<br>qui regroupe des fonctionalités tel que :<br>
+                     s'inscricre, se conecter, reserver.
+                </div>
+             </div>
+        </div>
+      </div>
+    </div>
+<!--  formulaire -->
+    <div class="contact container-fluid" id="messagerie">
+      <div class="row Mycontact">
+          <div class="line" id="ligne">
+            <h2>contactez moi </h2>
+          </div>
+
+        <div class="reseaux">
+          <div class="linkedin">
+             <h3><a href="#">linkedIn</a></h3>
+          </div>
+          <div class="down messages">
+             <button class="btn btn-info" id="boutton"name="button"> contactez moi</button>
+          </div>
+          <div class=" down git">
+            <h3><a href="#">git hub</a></h3>
+          </div>
+        </div>
+      </div>
+      <!--le modal  -->
+      <div class="window_up" id="monModal">
+        <div class="contenu_popUp">
+          <form class="" action="index.html" method="post">
+
+          </form>
+            <a href="#" id="closeMe">fermer</a>
+        </div>
+      </div>
+
+        <div class="framework row">
+          <div class=" down framework">
+            <h3><a href="#">langages ou frameworks en cours d'apprentissage</a></h3>
+          </div>
+        </div>
+    </div>
+
 </main>
 
 

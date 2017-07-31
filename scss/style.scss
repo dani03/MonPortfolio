@@ -3,7 +3,6 @@ body{
   padding: 0;
 }
 
-
 ul{
   display: flex;
   justify-content: space-around;
@@ -34,7 +33,10 @@ li{
   align-items: center;
   position: fixed;
 }
-
+.presentation{
+  animation-delay: 4s;
+  animation-duration: 2s;
+}
 .photomathon{
   width: 50%;
 }
@@ -42,19 +44,123 @@ li{
  width: 50%;
  text-align: center;
 }
+#cacher{
+  z-index: -100;
+  background: rgba(0, 0, 0,0.9);
+  width: 102%;
+  height: 700px;
+  margin-left: -20px;
+  margin-right: 0px;
+  padding-left: 30px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 45%;
+
+}
 // div 2-------------------------------------
 
 #story{
   width: 100%;
-  height: 500px;
+  height: 800px;
   background-color: blue;
   position: relative;
   top:1100px;
+
 }
+.etudes{
+  display:flex;
+  background: black;
+ width: 100%;
+ height: 600px;
+}
+.scolaire{
+  background-color: green;
+  width: 75%;
+  height: 500px;
+  margin-top: 20px;
+  padding: 10px 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+ .promo{
+   background-color: orange;
+   width: 65%;
+   height: 120px;
+   margin: 10px 10px;
+
+ }
+// grande ligne
+ #story::after {
+   position: absolute;
+   top: 50px;
+   left: 68%;
+   height:85%;
+   width: 3px;
+   background-color: gray;
+
+ }
+ .years{
+   width: 50px;
+   height: 500px;
+   margin-top: 5px;
+   padding: 10px 10px;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+.annee{
+  background: white;
+  width: 131px;
+  height: 70px;
+  margin: 35px;
+  top: 30px;
+  border-radius: 3px;
+  padding: 3px 3px;
+  position: relative;
+  text-align: center;
+}
+.annee::after {
+  position: absolute;
+  left: -7px;
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  content: '';
+  transform: rotate(45deg);
+  border: 1px white solid;
+  top:26px;
+}
+
+.annee::before {
+  position: absolute;
+  left: -29px;
+  height: 15px;
+  width: 15px;
+  background-color: gray;
+  content: '';
+  border: 1px gray solid;
+  top:26px;
+  border-radius: 50%;
+
+}
+.promo:hover{
+  box-shadow: 0 0 10px rgba(35, 173, 278, 1);
+}
+.promo p{
+  background: #2C3E50;
+  height: 13px;
+}
+
 // div 3-----------------------
 #educate{
   width: 100%;
-  height: 500px;
+  height: 600px;
   background-color: yellow;
   position: relative;
   top:1100px;
@@ -69,12 +175,156 @@ li{
    justify-content: center;
    top:4px;
 }
+
 .line::after {
   position: absolute;
-  top: 5px;
-  left: 35%;
-  height: 100px;
+  top: 7px;
+  left: 40%;
+  height: 90px;
   width: 3px;
   background-color: black;
   content: '';
+}
+ .langages{
+   background-color: white;
+   width: 100%;
+   height: 450px;
+   margin-top:15px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   padding: 15px 20px;
+ }
+ .progress{
+   width: 45%;
+
+ }
+// div 4 niveau projets----------------
+#experiences{
+  height: 600px;
+  width: 100%;
+  position: relative;
+  background-color: violet;
+  top:1100px;
+}
+#allProjets{
+  height: 600px;
+  width: 100%;
+  position: relative;
+  background-color:green;
+  top:1100px;
+  display: block;
+  justify-content: center;
+}
+.groupe{
+  display:flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.titleProjet{
+  text-align: center;
+  font-size: 45px;
+  text-transform: uppercase;
+  color:white;
+  text-shadow: 2px 2px 4px #000000;
+}
+strong{
+  text-transform: uppercase;
+}
+.allProjet{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 39%;
+  border: 1px white solid;
+  border-radius: 4px;
+  height: 100%;
+
+  margin-top:10px;
+}
+.overlay{
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right:0;
+  background-color: rgba(0, 0, 0,0.5);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .4s ease-in-out;
+  cursor: pointer;
+}
+.allProjet:hover .overlay{
+  height: 100%;
+  box-shadow: 0 0 10px rgba(35, 173, 278, 1);
+}
+
+.text {
+  white-space: nowrap;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.titleProjet{
+  text-align: center;
+  font-size: 45px;
+  text-transform: uppercase;
+  color:white;
+  text-shadow: 2px 2px 4px #000000;
+}
+// niveau formulaire
+#messagerie{
+  width: 100%;
+  top: 1100px;
+  background: gray;
+  position: relative;
+  height: 660px;
+  display: block;
+  justify-content: center;
+}
+.reseaux{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 90px;
+  align-items: center;
+}
+.framework{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
+button{
+  padding: 25px;
+  margin: 6%;
+  border-radius: 5px;
+  background: #3399CC;
+  color: #fff;
+  font-size: 26px;
+  border: none;
+  cursor: pointer;
+}
+.window_up{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 13;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+.contenu_popUp{
+  background:white;
+  height: 400px;
+  width: 500px;
+  top :25%;
+  position:absolute;
+  left: 35%;
 }
